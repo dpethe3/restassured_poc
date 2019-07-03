@@ -6,9 +6,9 @@
 
     </listeners>
 
-    <test name="GetTest">
+    <test name="validateAPItest">
         <classes>
-            <class name="APIGetTest"/>
+            <class name="APITests"/>
         </classes>
     </test>
 </suite>
