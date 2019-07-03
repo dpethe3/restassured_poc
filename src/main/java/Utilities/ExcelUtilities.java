@@ -35,8 +35,9 @@ public class ExcelUtilities {
         try {
             for (Row row : ExcelWSheet) {
                 for (Cell cell : row) {
-                    String cellValue = cell.getStringCellValue();
 
+                    //String cellValue = cell.getStringCellValue();
+                    String cellValue=dataFormatter.formatCellValue(cell);
                     System.out.print(cellValue + "\t");
 
                 }

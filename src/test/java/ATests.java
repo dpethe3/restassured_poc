@@ -33,8 +33,8 @@ public class ATests extends AutomationFrameworkBase {
 
     public void setUp() throws ClientProtocolException, IOException {
         testBase = new AutomationFrameworkBase();
-        serviceUrl = prop.getProperty("URL");
-        apiUrl = prop.getProperty("serviceURL");
+        //serviceUrl = prop.getProperty("URL");
+       // apiUrl = prop.getProperty("serviceURL");
         url = serviceUrl + apiUrl;
 
     }

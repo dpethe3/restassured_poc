@@ -27,20 +27,20 @@ public class APIGetTest {
 
 
     @Test
-    public void verifyReesponseCode() {
+    public void verifyResponseCode() {
         int code = RecievedRespose.getStatusCode();
 
         try {
 
            Assert.assertEquals(code, 20, "Response Code");
 
-          ExtentTestManager.getTest().setDescription("Vertify Response code");
-            ExtentTestManager.getTest().log(PASS,"Verify Response code","Rssponse code is "+code+"Expected Response code was 200");
+          ExtentTestManager.getTest().setDescription("Verify Response code");
+            ExtentTestManager.getTest().log(PASS,"Verify Response code","Response code is "+code+"Expected Response code was 200");
 
         }
         catch (AssertionError e){
             ExtentTestManager.startTest("Verify Response Code","response code verify");
-            ExtentTestManager.getTest().log(FAIL,"Verify Response code","Rssponse code is "+code+"Expected Response code was 200");
+            ExtentTestManager.getTest().log(FAIL,"Verify Response code","Response code is "+code+"Expected Response code was 200");
 
 
 
@@ -57,8 +57,8 @@ public class APIGetTest {
     {
         String line=RecievedRespose.getStatusLine();
        Assert.assertEquals(line,"HTTP/1.1 200 OK","Status Line");
-        ExtentTestManager.startTest("Verify Response Status Line","Resonse Status Line");
-        ExtentTestManager.getTest().log(PASS,"Verify Response status Line","Rssponse Status line is "+line);
+        ExtentTestManager.startTest("Verify Response Status Line","Response Status Line");
+        ExtentTestManager.getTest().log(PASS,"Verify Response status Line","Response Status line is "+line);
 
     }
 

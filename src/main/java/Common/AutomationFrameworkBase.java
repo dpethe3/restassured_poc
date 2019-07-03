@@ -8,14 +8,20 @@ import java.util.Properties;
 
 public class AutomationFrameworkBase {
 
-    public Properties prop;
+
+    public static Properties	CONFIG	= null;
+
 
     public AutomationFrameworkBase()
     {
+    }
+    public void loadConfigProperties(String propFilePath)
+    {
+        // Properties prop;
         try {
-            prop = new Properties();
-            FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/Configuration/config.properties");
-            prop.load(ip);
+            CONFIG = new Properties();
+            FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/config.properties");
+            CONFIG.load(ip);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
