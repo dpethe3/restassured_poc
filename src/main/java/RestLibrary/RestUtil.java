@@ -1,12 +1,33 @@
 package RestLibrary;
+import Common.ConfigProperties;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import Common.AutomationFrameworkBase;
 
-public class RestLibr {
+public class RestUtil {
 
+    public static String LLP_URL="";
+
+
+
+    public RestUtil() {
+        AutomationFrameworkBase base=new AutomationFrameworkBase();
+        base.loadConfigProperties("config.properties");
+
+    }
+    public String  checkenv(){
+        if(ConfigProperties.qaenv.equals("qa")){
+            LLP_URL=ConfigProperties.API_URL;
+
+        }
+        else{
+            LLP_URL=ConfigProperties.prod_API_URL;
+        }
+        return LLP_URL;
+    }
 
     public Response GetAPICall(String url)
     {
