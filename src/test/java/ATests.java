@@ -1,3 +1,4 @@
+/*
 import Common.AutomationFrameworkBase;
 import Common.Constants;
 import RestLibrary.RestMethods;
@@ -35,7 +36,9 @@ public class ATests extends AutomationFrameworkBase {
         testBase = new AutomationFrameworkBase();
         //serviceUrl = prop.getProperty("URL");
        // apiUrl = prop.getProperty("serviceURL");
-        url = serviceUrl + apiUrl;
+        url = serviceUrl + apiUrl;*/
+/**//*
+
 
     }
 
@@ -88,3 +91,4 @@ public class ATests extends AutomationFrameworkBase {
 
 
 }
+*/

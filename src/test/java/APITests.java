@@ -1,8 +1,8 @@
 import Common.AutomationFrameworkBase;
 import RestLibrary.RestUtil;
-import Utilities.ExtentReports.ExtentTestManager;
+
 import Utilities.TestDataProvider;
-import com.relevantcodes.extentreports.ExtentTest;
+
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -15,14 +15,13 @@ import org.testng.annotations.Test;
 
 import java.util.Properties;
 
-import static com.relevantcodes.extentreports.LogStatus.FAIL;
-import static com.relevantcodes.extentreports.LogStatus.PASS;
+
 
 public class APITests
 {
 RestUtil restutil=null;
 AutomationFrameworkBase workbase=null;
-    ExtentTestManager et=null;
+
 
     public static final int	HTTP_STATUS_OK	= 200;
 
@@ -32,7 +31,7 @@ AutomationFrameworkBase workbase=null;
     public void setup(){
         restutil=new RestUtil();
         workbase=new AutomationFrameworkBase();
-        et=new ExtentTestManager();
+        //et=new ExtentTestManager();
 
     }
 
@@ -76,8 +75,8 @@ public void validateAPItest(String client_id,String authToken,String store_name,
     }
     catch (AssertionError e){
         System.out.println(e.getMessage());
-        ExtentTestManager.startTest("Verify Response Code","response code verify");
-        ExtentTestManager.getTest().log(FAIL,"Verify Response code","Response code is "+status_code+" Expected Response code was 200");
+        //ExtentTestManager.startTest("Verify Response Code","response code verify");
+        //ExtentTestManager.getTest().log(FAIL,"Verify Response code","Response code is "+status_code+" Expected Response code was 200");
 
     }
     try{
@@ -88,8 +87,8 @@ public void validateAPItest(String client_id,String authToken,String store_name,
     }
 
     catch(AssertionError e1){
-        ExtentTestManager.startTest("Verify Response Status Line","Resonse Status Line");
-        ExtentTestManager.getTest().log(FAIL,"Verify Response status Line","Response Status line is "+line+"Expected Response status line is HTTP/1.1 200 OK");
+        //ExtentTestManager.startTest("Verify Response Status Line","Resonse Status Line");
+       // ExtentTestManager.getTest().log(FAIL,"Verify Response status Line","Response Status line is "+line+"Expected Response status line is HTTP/1.1 200 OK");
     }
 
 

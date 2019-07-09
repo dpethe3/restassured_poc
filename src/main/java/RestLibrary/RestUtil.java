@@ -13,19 +13,20 @@ public class RestUtil {
 
 
 
-    public RestUtil() {
-        AutomationFrameworkBase base=new AutomationFrameworkBase();
+  /*  public RestUtil() {
+        AutomationFrameworkBase base = new AutomationFrameworkBase();
         base.loadConfigProperties("config.properties");
 
-    }
+    }*/
     public String  checkenv(){
-        if(ConfigProperties.qaenv.equals("qa")){
-            LLP_URL=ConfigProperties.API_URL;
+        LLP_URL="https://momentfeed-prod.apigee.net/api/llp.json?auth_token=";
+       /* if(ConfigProperties.qaenv.equals("qa")){
+            LLP_URL="https://momentfeed-prod.apigee.net/api/llp.json?auth_token=";
 
         }
         else{
-            LLP_URL=ConfigProperties.prod_API_URL;
-        }
+            LLP_URL="https://momentfeed-prod.apigee.net/api/llp.json?auth_token=";
+        }*/
         return LLP_URL;
     }
 

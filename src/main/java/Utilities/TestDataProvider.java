@@ -17,8 +17,8 @@ public class TestDataProvider {
 
     public static Object[][] getTestData_queryfile(String filename) throws IOException {
        // String dataFile = System.getProperty(filename, filename + ".xlsx");
-        String dataFile= System.getProperty(filename,"src/test/resources/dataFiles/" + filename +".xlsx");
-
+        //String dataFile= System.getProperty(filename,"src/test/resources/dataFiles/" + filename +".xlsx");
+        String dataFile =  "D:/R_01/restassured_poc/src/test/resources/dataFiles/"+ filename +".xlsx";
       // Object[][] data=locateFile(dataFile);
         Object[][] data=ExcelUtilities.readExcel(dataFile);;
         return data;
