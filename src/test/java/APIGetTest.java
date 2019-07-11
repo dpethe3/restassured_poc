@@ -1,25 +1,26 @@
-import RestLibrary.RestLibr;
+import RestLibrary.RestUtil;
 import Utilities.ExtentReports.ExtentTestManager;
-import com.sun.xml.bind.v2.runtime.output.FastInfosetStreamWriterOutput;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import static com.relevantcodes.extentreports.LogStatus.FAIL;
 import static com.relevantcodes.extentreports.LogStatus.PASS;
+
+
+
+
 
 public class APIGetTest {
 
     public Response RecievedRespose;
     public String responseBody;
     public JsonPath jp;
-    RestLibr rb = new RestLibr();
+    RestUtil rb = new RestUtil();
 
     @BeforeClass
-    public void getRssponseBody() {
+    public void getResponseBody() {
         RecievedRespose = rb.GetAPICall("https://momentfeed-prod.apigee.net/api/llp.json?auth_token=IVNLPNUOBXFPALWE");
         responseBody = RecievedRespose.getBody().asString();
          jp = RecievedRespose.jsonPath();
@@ -36,6 +37,8 @@ public class APIGetTest {
 
           ExtentTestManager.getTest().setDescription("Verify Response code");
             ExtentTestManager.getTest().log(PASS,"Verify Response code","Response code is "+code+"Expected Response code was 200");
+
+
 
         }
         catch (AssertionError e){

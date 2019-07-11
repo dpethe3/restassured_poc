@@ -1,19 +1,13 @@
 import Common.AutomationFrameworkBase;
 import RestLibrary.RestUtil;
-
 import Utilities.TestDataProvider;
-
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.util.Properties;
 
 
 

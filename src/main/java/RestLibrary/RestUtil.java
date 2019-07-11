@@ -1,11 +1,11 @@
 package RestLibrary;
+
+import Common.AutomationFrameworkBase;
 import Common.ConfigProperties;
-import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import Common.AutomationFrameworkBase;
 
 public class RestUtil {
 
@@ -13,20 +13,20 @@ public class RestUtil {
 
 
 
-  /*  public RestUtil() {
+   public RestUtil() {
         AutomationFrameworkBase base = new AutomationFrameworkBase();
         base.loadConfigProperties("config.properties");
 
-    }*/
+    }
     public String  checkenv(){
-        LLP_URL="https://momentfeed-prod.apigee.net/api/llp.json?auth_token=";
-       /* if(ConfigProperties.qaenv.equals("qa")){
+      //  LLP_URL="https://momentfeed-prod.apigee.net/api/llp.json?auth_token=";
+        if(ConfigProperties.qaenv.equals("qa")){
             LLP_URL="https://momentfeed-prod.apigee.net/api/llp.json?auth_token=";
 
         }
         else{
             LLP_URL="https://momentfeed-prod.apigee.net/api/llp.json?auth_token=";
-        }*/
+        }
         return LLP_URL;
     }
 

@@ -2,22 +2,18 @@ import Common.AutomationFrameworkBase;
 import Common.Constants;
 import Common.functionLibrary;
 import RestLibrary.RestUtil;
-
 import Utilities.ExtentR.ExtentManager;
 import Utilities.TestDataProvider;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
+import org.json.JSONArray;
 import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.io.IOException;
 
 
 public class DAPITests {
@@ -57,12 +53,12 @@ public class DAPITests {
         String corporateid=obj.getJSONObject("store_info").getString("corporate_id");
         String phonenum=obj.getJSONObject("store_info").getString("phone");
         int no_of_Stores=obj.getJSONObject("store_info").length();
-
+        
 
 
         // call createTest method and pass the name of TestCase- Based on your requirement
         ExtentTest test1 = extent.createTest("Verify Response code");
-        test1.log(Status.INFO, "Response code Rcieved was " + status_code);
+        test1.log(Status.INFO, "Response code Recieved was " + status_code);
 
         //@Test -1 Verify Status Code
         if (library.verifyNumberValue(Constants.RESPONSE_STATUS_CODE_200, status_code)) {

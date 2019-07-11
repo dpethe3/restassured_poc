@@ -1,7 +1,6 @@
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
 
 public class ApiCall_Gherkin {
 

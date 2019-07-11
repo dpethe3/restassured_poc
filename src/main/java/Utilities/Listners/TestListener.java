@@ -2,13 +2,12 @@ package Utilities.Listners;
 
 
 import Common.AutomationFrameworkBase;
+import Utilities.ExtentReports.ExtentManager;
+import Utilities.ExtentReports.ExtentTestManager;
 import com.relevantcodes.extentreports.LogStatus;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import Utilities.ExtentReports.ExtentManager;
-import Utilities.ExtentReports.ExtentTestManager;
 
     public class TestListener extends AutomationFrameworkBase implements ITestListener {
 
